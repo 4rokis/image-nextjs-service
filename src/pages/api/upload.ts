@@ -5,6 +5,14 @@ import { Query } from '@/lib/types'
 import { NextApiRequest, NextApiResponse } from 'next'
 import { v4 as uuid } from 'uuid'
 
+export const config = {
+  api: {
+    bodyParser: {
+      sizeLimit: '10mb',
+    },
+  },
+}
+
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
